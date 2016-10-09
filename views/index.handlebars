@@ -1,0 +1,92 @@
+<div id="main">
+  <div id="center">
+    <div id="logo">
+    <img src="/assets/img/burger.png">
+    </div>
+  <div id="orders">
+      <h2> Eat-Da-Burger</h2>
+  
+  <div id="postordered">
+       <h3>Chose your Burger</h3>
+
+      <ol>
+        {{#each burgers}}
+          {{#unless this.devouted}}
+            <li id="choseburger">
+            
+              {{this.burger_name}}
+              
+              <form action="burgers/update/{{this.id}}?_method=PUT" method="POST">
+                <input type="hidden" name="devouted" value="true">
+                 <button type="submit" class="btn btn-success">Devour</button>
+                 </form>
+               
+               
+            
+     <!--  <form action="burgers/delete/{{this.id}}?_method=DELETE" method="POST">
+          <button type="submit">Devour!</button>
+      </form>
+ -->
+
+             
+            </li>
+          {{/unless}}
+        {{/each}}
+      </ol>
+      
+  </div>
+
+<div id="preordered">
+          <h3>Devoured Burgers</h3>
+
+        <ol>
+          {{#each burgers}}
+            {{#if this.devouted}}
+              <li id="devourted">
+                {{this.burger_name}}
+
+              <!--   <form action="burgers/update/{{this.id}}?_method=PUT" method="POST">
+                  <input type="hidden" name="devouted" value="false">
+                  <button type="submit">Order It</button>
+                </form>
+ -->
+               
+              </li>
+            {{/if}}
+          {{/each}}
+        </ol>
+      </div>  
+    
+
+  </div>
+<hr>
+   <div id="newburger">
+<form class="create-update-form" action="burgers/create" method="POST">
+
+  <div class="form-group">
+    <label for="burger">Create burger</label>
+    <input type="text" id="burgerId" name="burger_name">
+  </div>
+
+  <!-- <div class="form-group">
+    <label for="slee">devouted?</label><br>
+    <input type="radio" name="devouted" value="1" checked> devouted!<br>
+    <input type="radio" name="devouted" value="0"> Awake
+  </div> -->
+
+  <button type="submit" class="btn btn-primary center-block">Add burger</button>
+</form>
+  </div>
+
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+

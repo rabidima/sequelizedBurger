@@ -1,0 +1,93 @@
+#main{
+	background-color: #ffca67;
+	display: block;
+}
+#center{
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 800px;
+	
+}
+
+#logo{
+	padding-top:20px;
+}
+#orders{
+	display: block;
+}
+#preordered{
+	
+	float: right;
+	width: 350px;
+	color: red;
+	margin-right: : 20px;
+}
+
+h3{
+	text-align: center;
+}
+h2{
+	color:red;
+	text-align: center;
+}
+#postordered{
+	float: left;
+	width: 350px;
+	
+	
+}
+#choseburger{
+	color: black;
+	margin: 5px;
+	padding: 15px;	
+}
+
+#devourted{
+	color: grey;
+	margin: 5px;
+	padding: 15px;	
+}	
+
+#newburger{
+	clear: both;
+	max-width: 350px;
+	border: 1px solid red;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+.btn-success{
+	position: relative;
+  top: -15px;
+  left: 295px;
+
+}
+
+
+img{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+
+}
+
+li {
+
+  background: white;
+  margin-right: 25px;
+  padding: 1px;
+
+}
+
+.label {
+  font-weight: bold;
+}
+
+.create-update-form {
+  margin: 5px;
+  padding: 5px;
+}
+
+.form-group {
+  margin-bottom: 5px;
+}
