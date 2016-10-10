@@ -1,5 +1,5 @@
 {
-  "name": "week-14",
+  "name": "sequelizedBurger",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -9,20 +9,22 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rabidima/burger.git"
+    "url": "git+https://github.com/rabidima/sequelizedBurger.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/rabidima/burger/issues"
+    "url": "https://github.com/rabidima/sequelizedBurger/issues"
   },
-  "homepage": "https://github.com/rabidima/burger#readme",
+  "homepage": "https://github.com/rabidima/sequelizedBurger#readme",
   "dependencies": {
     "body-parser": "^1.15.2",
     "express": "^4.14.0",
     "express-handlebars": "^3.0.0",
     "method-override": "^2.3.6",
-    "mysql": "^2.11.1"
+    "mysql": "^2.11.1",
+    "sequelize": "^3.24.3",
+    "sequelize-cli": "^2.4.0"
   }
 }
