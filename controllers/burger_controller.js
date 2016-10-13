@@ -7,18 +7,18 @@ router.get('/', function(req, res) {
 
   // SOLUTION:
   // =========
-  // use the Cat model to find all cats,
+  // use the Burger model to find all burgers,
   // and use the include option to grab info from the User model.
   // This will let us show the cat and it's owner.
-  models.Cat.findAll({
+  models.Burger.findAll({
     include: [ models.User ]
   })
   // connect the findAll to this .then
-  .then(function(cats) {
+  .then(function(burgers) {
     // grab the user info from our req.
     // How is it in our req?
     // This info gets saved to req via the users_controller.js file.
-    res.render('cats/index', {
+    res.render('burgers/index', {
       user_id: req.session.user_id,
       email: req.session.user_email,
       logged_in: req.session.logged_in,
@@ -28,10 +28,9 @@ router.get('/', function(req, res) {
 });
 
 router.post('/create', function (req, res) {
-  // SOLUTION:
-  // =========
+ 
   // use the Burger model to create a cat based on what's
-  // passed in req.body (name, sleepy, user_id)
+  // passed in req.body (name, devouted)
   models.Burger.create({
     burger_name: req.body.burger_name,
     devouted: req.body.devouted,
@@ -46,8 +45,8 @@ router.post('/create', function (req, res) {
 router.put('/update/:id', function(req,res) {
   // SOLUTION:
   // =========
-  // use the Burger model to update a burger's sleepy status
-  // based on the boolean passed in req.body sleepy
+  // use the Burger model to update a burger's devoure status
+  // based on the boolean passed in req.body devoure
   // and the id of the burger (as passed in the url)
   models.Burger.update(
   {
